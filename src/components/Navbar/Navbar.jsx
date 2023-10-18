@@ -1,8 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { RiHomeLine, RiBriefcase3Line, RiShoppingCartLine, RiLoginBoxLine, RiCreativeCommonsByLine, RiLogoutBoxLine } from "react-icons/ri";
-import logoImg from '../../assets/images/logo.gif'
+import logoImg from '../../assets/images/logo.png'
+import ThemeBtn from '../LightDark/ThemeBtn';
 
 
 const Navbar = () => {
@@ -52,7 +53,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 shadow-md">
+        <div className="navbar bg-base-100 shadow-md dark:text-white  dark:bg-gray-800">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -64,9 +65,13 @@ const Navbar = () => {
                 </div>
                 <h2 className='lg:font-bold text-blue-700 font-rancho font-extrabold text-2xl'>Entertainment <br /> 
                         <span className='text-red-500'>Media</span></h2>
+                <div className='flex gap-2'>
                 <Link to="/" className="navbar-item">
                     <img src={logoImg} alt="logo" className="h-14" />
                 </Link>
+                
+                <ThemeBtn></ThemeBtn>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -104,6 +109,7 @@ const Navbar = () => {
                                 </Link>
                         }
                     </ul>
+                    
                 </div>
             </div>
         </div>

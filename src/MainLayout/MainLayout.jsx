@@ -1,19 +1,17 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/NavBar/Navbar';
 import Footer from '../components/Footer/Footer';
+import ThemeBtn from '../components/LightDark/ThemeBtn';
 
 const MainLayout = () => {
+
     return (
-        <div>
-            <div>
-                <Navbar></Navbar>
-            </div>
+        <div className='dark:bg-gray-800'>
+            <Navbar></Navbar>
             <Outlet />
-            <div>
-                <Footer />
-            </div>
+            <Footer />
         </div>
+
     );
 };
 

@@ -11,12 +11,13 @@ import Login from '../Page/Login/Login';
 const Router = createBrowserRouter([
     {
         path: '/',
-        element: <MainLayout />,
+        element: <MainLayout  />,
         errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5001/brand')
             },
             {
                 path: '/addproduct',
@@ -33,7 +34,7 @@ const Router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
-            }
+            },
         ]
     }
 ])

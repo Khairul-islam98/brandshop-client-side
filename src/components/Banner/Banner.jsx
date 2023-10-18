@@ -3,8 +3,8 @@ import banner from '../.././assets/images/banner.gif';
 
 const Banner = () => {
     return (
-        <div>
-            <div className="hero min-h-[500px]" style={{ backgroundImage: `url(${banner})` }}>
+        <div className='bg-white dark:bg-gray-800'>
+            <div className="hero min-h-[500px] " style={{ backgroundImage: `url(${banner})` }}>
                 <div class="flex items-center justify-center h-screen">
                     <div class="mx-auto my-auto">
                         <h1 className='font-rancho text-4xl text-white text-center mb-2 '>Entertainment and Media</h1>

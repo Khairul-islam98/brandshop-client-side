@@ -5,12 +5,12 @@ import Contact from '../Contact/Contact';
 
 const Footer = () => {
     return (
-        <div className="hero min-h-[400px] bg-blue-950 mt-5" >
+        <div className="hero min-h-[400px]  bg-black mt-5 " >
             <div className='ml-5  md:flex justify-between items-center gap-20'>
                 <div>
                     <img src="" alt="" />
                     <h1 className='text-4xl text-white font-rancho mt-5 mb-5'>Entertainment and Media</h1>
-                    
+
                     <div className='flex text-3xl text-white mt-5 mb-5 gap-3'>
                         <span><FaFacebook></FaFacebook></span>
                         <span><FaTwitter></FaTwitter></span>
