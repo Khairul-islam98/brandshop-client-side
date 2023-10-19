@@ -1,10 +1,34 @@
 import React from 'react';
 
 const AddProduct = () => {
+
+    const handlAddProduct = e => {
+        e.preventDefault()
+        const form = e.target
+        const name = form.name.value
+        const brandName = form.brandName.value
+        const type = form.type.value
+        const photo = form.photo.value
+        const price = form.price.value
+        const description = form.description.value
+        const rating = form.rating.value
+        const addProduct = { name, price, description, photo, brandName, type, rating }
+        console.log(addProduct);
+        fetch('http://localhost:5001/products',{
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(addProduct)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+    }
+
     return (
         <div className='flex justify-center mb-10 mt-10 '>
             <div className="w-full max-w-2xl p-2 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-                <form className="space-y-6">
+                <form onSubmit={handlAddProduct} className="space-y-6">
                     <h5 className="text-xl font-medium text-center text-gray-900 dark:text-white">Add a Product</h5>
                     <div>
                         <label for="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -26,7 +50,7 @@ const AddProduct = () => {
                         <select id="type" name="type" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white'>
                             <option value="Action">Action</option>
                             <option value="Romance">Romance</option>
-                            <option value="Horror">Disney</option>
+                            <option value="Horror">Horror</option>
                             <option value="Stories">Stories</option>
                             <option value="Educational">Educational</option>
                             <option value="Music">Music</option>
