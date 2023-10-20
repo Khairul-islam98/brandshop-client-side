@@ -84,7 +84,7 @@ const Navbar = () => {
                         <div className="">
                             {
                                 user ? <div className='w-10 rounded-full'><img className='btn btn-ghost btn-circle avatar online' src={user?.photoURL} /></div> :
-                                    // <img src={userImg} />
+                                   
                                     <button className='btn w-full'><span className='text-2xl'><RiLoginBoxLine></RiLoginBoxLine></span> Login</button>
 
                             }
@@ -94,7 +94,7 @@ const Navbar = () => {
                         <li>
                             <a className="justify-center">
                                 {
-                                    user ? <h2 className='font-bold btn-primary'>Name: {user && <span> {user.displayName} </span>}</h2> :
+                                    user ? <h2 className='font-rancho text-4xl'> {user && <span> {user?.displayName} </span>}</h2> :
                                         <p></p>
                                 }
 
