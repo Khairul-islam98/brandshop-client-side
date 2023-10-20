@@ -14,7 +14,7 @@ const AddProduct = () => {
         const rating = form.rating.value
         const addProduct = { name, price, description, photo, brandName, type, rating }
         console.log(addProduct);
-        fetch('http://localhost:5001/products',{
+        fetch('https://brand-shop-server-nine-psi.vercel.app/products',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(addProduct)

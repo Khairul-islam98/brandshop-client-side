@@ -15,37 +15,38 @@ import ProductUpdate from '../components/ProductUpdate/ProductUpdate';
 const Router = createBrowserRouter([
     {
         path: '/',
-        element: <MainLayout  />,
+        element: <MainLayout />,
         errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5001/brand')
-        
+                loader: () => fetch('https://brand-shop-server-nine-psi.vercel.app/brand')
+
             },
             {
                 path: '/brand/:brandName',
                 element: <PrivateRoute><BrandProduct></BrandProduct></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5001/products/${params.brandName}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-nine-psi.vercel.app/products/${params.brandName}`)
             },
             {
                 path: '/productdetails/:id',
                 element: <ProductDetails></ProductDetails>,
-                loader: ({params}) => fetch(`http://localhost:5001/products/id/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-nine-psi.vercel.app/products/id/${params.id}`)
             },
             {
                 path: '/productupdate/:id',
                 element: <ProductUpdate></ProductUpdate>,
-                loader: ({params}) => fetch(`http://localhost:5001/products/id/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-nine-psi.vercel.app/products/id/${params.id}`)
             },
             {
                 path: '/addproduct',
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
-                path: '/mycart',
-                element: <MyCart></MyCart>
+                path: '/mycart', 
+                element: <MyCart></MyCart>,
+                loader: () => fetch(`https://brand-shop-server-nine-psi.vercel.app/user`)
             },
             {
                 path: '/login',
