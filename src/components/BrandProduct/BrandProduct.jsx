@@ -5,7 +5,6 @@ import Swipers from '../Swiper/Swipers';
 
 const BrandProduct = () => {
     const brandProducts = useLoaderData()
-    // const[product, setProduct] = useState(brandProducts)
 
     if (brandProducts.some(product => !product.price)) {
         return (

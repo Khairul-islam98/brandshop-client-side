@@ -5,7 +5,7 @@ import Contact from '../Contact/Contact';
 
 const Footer = () => {
     return (
-        <div className="hero min-h-[400px]  bg-black mt-5 " >
+        <div className="hero min-h-[400px] dark:bg-gray-800 border shadow-slate-200  bg-black mt-5 " >
             <div className='ml-5  md:flex justify-between items-center gap-20'>
                 <div>
                     <img src="" alt="" />

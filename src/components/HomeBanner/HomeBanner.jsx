@@ -3,8 +3,9 @@ import { FcCustomerSupport, FcDocument, FcVideoProjector, FcVip } from "react-ic
 
 const HomeBanner = () => {
     return (
-        <div className='flex cursor-pointer  text-white w-10/12 mb-10 mx-auto'>
-            <div className="overflow-hidden flex flex-col items-center  text-center h-full w-full  rounded border shadow-md  shadow-slate-200 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
+        <div className='dark:bg-gray-800 '>
+            <div className='flex cursor-pointer  text-white w-10/12 mb-10 mx-auto'>
+            <div className="overflow-hidden flex flex-col items-center  text-center h-full w-full  rounded border shadow-md  shadow-slate-200 transition ease-in-out dark:bg-gray-800 delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
                 <figure className="p-6 pb-0">
                     <p className='text-5xl text-center'><FcCustomerSupport></FcCustomerSupport></p>
                 </figure>
@@ -12,7 +13,7 @@ const HomeBanner = () => {
                     <h2>Support Center</h2>
                 </div>
             </div>
-            <div className="overflow-hidden flex flex-col items-center  text-center h-full w-full  rounded border shadow-md  shadow-slate-200 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
+            <div className="overflow-hidden flex flex-col items-center  text-center h-full w-full  rounded border shadow-md  shadow-slate-200 transition ease-in-out delay-150 dark:bg-gray-800 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
 
                 <figure className="p-6 pb-0">
                     <p className='text-5xl text-center'><FcDocument></FcDocument></p>
@@ -22,7 +23,7 @@ const HomeBanner = () => {
 
                 </div>
             </div>
-            <div className="overflow-hidden flex flex-col items-center  text-center h-full w-full  rounded border shadow-md  shadow-slate-200 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
+            <div className="overflow-hidden flex flex-col items-center  text-center h-full w-full  rounded border shadow-md  shadow-slate-200 transition ease-in-out delay-150 dark:bg-gray-800 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
 
                 <figure className="p-6 pb-0">
                     <p className='text-5xl text-center'><FcVideoProjector></FcVideoProjector></p>
@@ -32,7 +33,7 @@ const HomeBanner = () => {
 
                 </div>
             </div>
-            <div className="overflow-hidden flex flex-col items-center  text-center h-full w-full  rounded border shadow-md  shadow-slate-200 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
+            <div className="overflow-hidden flex flex-col items-center  text-center h-full w-full  rounded border shadow-md  shadow-slate-200 transition ease-in-out delay-150 dark:bg-gray-800 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
 
                 <figure className="p-6 pb-0">
                     <p className='text-5xl text-center'><FcVip></FcVip></p>
@@ -42,6 +43,7 @@ const HomeBanner = () => {
 
                 </div>
             </div>
+        </div>
         </div>
     );
 };

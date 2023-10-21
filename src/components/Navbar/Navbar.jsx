@@ -67,7 +67,7 @@ const Navbar = () => {
                         <span className='text-red-500'>Media</span></h2>
                 <div className='flex gap-2'>
                 <Link to="/" className="navbar-item">
-                    <img src={logoImg} alt="logo" className="h-14" />
+                    <img src={logoImg} alt="logo" className="h-20" />
                 </Link>
                 
                 <ThemeBtn></ThemeBtn>

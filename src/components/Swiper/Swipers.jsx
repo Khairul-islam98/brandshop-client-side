@@ -52,31 +52,3 @@ export default Swipers;
 
 
 
-
-{/* <div className='w-[250px] md:w-[500px] lg:w-[600px]'>
-                <Swiper
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
-                    spaceBetween={50}
-                    slidesPerView={1.5}
-                    navigation={{
-                        prevEl: '.prev',
-                        nextEl: '.next',
-                    }}
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
-                >
-                    <SwiperSlide className='border-8 rounded-xl md:rounded-3xl lg:rounded-3xl border-yellow-500'>
-                           
-                            <img src={ad.ads1} alt="" />
-                    </SwiperSlide>
-                    <SwiperSlide className='border-8 rounded-xl md:rounded-3xl lg:rounded-3xl border-yellow-500'>
-                            
-                            <img src={ad.ads2} alt="" />
-    
-                    </SwiperSlide>
-                    <SwiperSlide className='border-8 rounded-xl md:rounded-3xl lg:rounded-3xl border-yellow-500'>
-                            
-                            <img src={ad.ads3} alt="" />
-                    </SwiperSlide>
-                </Swiper>
-            </div> */}
