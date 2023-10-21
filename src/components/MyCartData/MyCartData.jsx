@@ -3,7 +3,7 @@ import { SlTrash } from "react-icons/sl";
 import { AiTwotoneStar } from "react-icons/ai";
 import Swal from 'sweetalert2';
 
-const MyCartData = ({ cart, myCart, setMyCart, cartData, setCartData }) => {
+const MyCartData = ({ cart, myCart, setMyCart,  setCartData }) => {
 
     const { uid } = cart;
     useEffect(() => {
@@ -12,9 +12,9 @@ const MyCartData = ({ cart, myCart, setMyCart, cartData, setCartData }) => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    const cartDatas = data.filter(data => data.uid == cart.uid);
-                    console.log(cartDatas);
-                    setCartData(cartDatas);
+                    const cartData = data.filter(data => data.uid == cart.uid);
+                    console.log(cartData);
+                    setCartData(cartData);
                 });
         }
     }, [cart]);

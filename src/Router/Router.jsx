@@ -31,7 +31,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/productdetails/:id',
-                element: <ProductDetails></ProductDetails>,
+                element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://brand-shop-server-nine-psi.vercel.app/products/id/${params.id}`)
             },
             {
@@ -45,7 +45,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/mycart', 
-                element: <MyCart></MyCart>,
+                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
                 loader: () => fetch(`https://brand-shop-server-nine-psi.vercel.app/user`)
             },
             {

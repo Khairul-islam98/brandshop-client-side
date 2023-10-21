@@ -19,7 +19,7 @@ const MyCart = () => {
     
 
     return (
-        <div>
+        <div className='grid md:grid-cols-2 gap-4 py-20'>
             {
                 myCart.map((cart) => <MyCartData  cart={cart} myCart={myCart} setMyCart={setMyCart} cartData={cartData} setCartData={setCartData}></MyCartData >)
             }
